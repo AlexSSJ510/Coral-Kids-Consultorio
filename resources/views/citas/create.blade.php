@@ -11,7 +11,7 @@
                     <label class="block text-gray-700 font-semibold mb-2">Paciente</label>
                     <select name="paciente_id" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400" required>
                         @foreach ($pacientes as $paciente)
-                            <option value="{{ $paciente->id }}" {{ (old('paciente_id', $pacienteId) == $paciente->id) ? 'selected' : '' }}>
+                            <option value="{{ $paciente->id }}" {{ old('paciente_id', $pacienteId) == $paciente->id ? 'selected' : '' }}>
                                 {{ $paciente->nombre }}
                             </option>
                         @endforeach
@@ -22,32 +22,34 @@
                     <label class="block text-gray-700 font-semibold mb-2">Doctor</label>
                     <select name="doctor_id" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400" required>
                         @foreach ($doctores as $doctor)
-                            <option value="{{ $doctor->id }}">{{ $doctor->nombre }}({{ $doctor->especialidad }})</option>
+                            <option value="{{ $doctor->id }}" {{ old('doctor_id') == $doctor->id ? 'selected' : '' }}>
+                                {{ $doctor->nombre }} ({{ $doctor->especialidad }})
+                            </option>
                         @endforeach
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Fecha</label>
-                    <input type="date" name="fecha" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400" required>
+                    <input type="date" name="fecha" value="{{ old('fecha') }}" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400" required>
                 </div>
 
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Hora</label>
-                    <input type="time" name="hora" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400" required>
+                    <input type="time" name="hora" value="{{ old('hora') }}" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400" required>
                 </div>
 
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Motivo</label>
-                    <textarea name="motivo" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400"></textarea>
+                    <textarea name="motivo" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400">{{ old('motivo') }}</textarea>
                 </div>
 
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Estado</label>
                     <select name="estado" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-400" required>
-                        <option value="Pendiente">Pendiente</option>
-                        <option value="Realizada">Realizada</option>
-                        <option value="Cancelada">Cancelada</option>
+                        <option value="Pendiente" {{ old('estado') == 'Pendiente' ? 'selected' : '' }}>Pendiente</option>
+                        <option value="Realizada" {{ old('estado') == 'Realizada' ? 'selected' : '' }}>Realizada</option>
+                        <option value="Cancelada" {{ old('estado') == 'Cancelada' ? 'selected' : '' }}>Cancelada</option>
                     </select>
                 </div>
 

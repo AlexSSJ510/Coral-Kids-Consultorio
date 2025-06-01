@@ -18,7 +18,7 @@
                     <a href="{{ route('dashboard') }}" class="block hover:bg-blue-700 rounded p-2">Inicio</a>
                     <a href="{{ route('pacientes.index') }}" class="block hover:bg-blue-700 rounded p-2">Pacientes</a>
                     <a href="{{ route('citas.index') }}" class="block hover:bg-blue-700 rounded p-2">Crear cita</a>
-                    <a href="#" class="block hover:bg-blue-700 rounded p-2">Mis citas</a>
+                    <a href="{{ route('doctor.index') }}" class="block hover:bg-blue-700 rounded p-2">Crear Médico</a>
                     <a href="{{ route('profile.edit') }}" class="block hover:bg-blue-700 rounded p-2">Editar perfil</a>
                 </nav>
             </div>

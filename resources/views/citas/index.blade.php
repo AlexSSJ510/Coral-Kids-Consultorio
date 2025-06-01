@@ -24,13 +24,15 @@
                         <tbody class="bg-white divide-y divide-gray-100">
                             @forelse ($citas as $cita)
                                 <tr class="hover:bg-gray-50 transition">
-                                    <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ $cita->paciente->nombre }}</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ $cita->doctor->nombre }}</td>
+                                    {{-- Accede directamente a las propiedades retornadas del procedimiento --}}
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ $cita->paciente_nombre }} {{ $cita->paciente_apellidos }}</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ $cita->doctor_nombre }} {{ $cita->doctor_apellido }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ \Carbon\Carbon::parse($cita->fecha)->format('d/m/Y') }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ $cita->hora }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap text-gray-800">{{ $cita->motivo }}</td>
                                     <td class="px-6 py-4">
-                                        <form action="{{ route('citas.cambiarEstado', $cita) }}" method="POST">
+                                        {{-- Para cambiar estado, necesitas el id de la cita --}}
+                                        <form action="{{ route('citas.cambiarEstado', $cita->id) }}" method="POST">
                                             @csrf
                                             <select name="estado" onchange="this.form.submit()" class="border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-700 focus:ring-blue-500 focus:border-blue-500">
                                                 <option value="Pendiente" {{ $cita->estado == 'Pendiente' ? 'selected' : '' }}>Pendiente</option>
