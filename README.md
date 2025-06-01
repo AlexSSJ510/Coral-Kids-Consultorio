@@ -1,38 +1,38 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Coral-Kids-Consultorio/
-│
-├── app/
-│   ├── Http/
-│   │   └── Controllers/          ← Controladores (C)
-│   ├── Models/                   ← Modelos (M) (si no existe, se crea)
-│   └── Providers/                ← Proveedores de servicios (no es MVC pero útil)
-│
-├── resources/
-│   └── views/                    ← Vistas (V)
-│
-├── routes/
-│   ├── web.php                   ← Rutas para vistas y controladores (V y C)
-│   └── api.php                   ← Rutas para API REST (MVC aplicado vía JSON)
-│
-├── database/
-│   ├── migrations/               ← Migraciones para crear estructuras de modelos
-│   ├── factories/                ← Fabricantes de datos para modelos
-│   └── seeders/                  ← Carga de datos a los modelos
-│
-├── public/
-│   ├── css/
-│   ├── js/
-│   └── index.php                 ← Entrada pública, renderiza vistas
-│
-├── config/                       ← Configuraciones (no parte de MVC, pero esencial)
-├── bootstrap/                    ← Archivo de arranque (`app.php`)
-├── storage/                      ← Archivos generados (logs, caché)
-├── tests/                        ← Pruebas de modelos/controladores
-├── vendor/                       ← Dependencias externas (Composer)
-│
-├── .env                          ← Configuración de entorno
-├── artisan                       ← CLI de Laravel (permite ejecutar comandos)
-├── composer.json                 ← Dependencias PHP
-├── package.json                  ← Dependencias JS
-├── README.md                     ← Documentación
+Coral-Kids-Consultorio/                                                                                                                                                                                                     
+│                                                                                                                                                                                                                           
+├── app/                                                                                                                                                                                                                    
+│   ├── Http/                                                                                                                                                                                                               
+│   │   └── Controllers/          ← Controladores (C)                                                                                                                                                                       
+│   ├── Models/                   ← Modelos (M) (si no existe, se crea)                                                                                                                                                     
+│   └── Providers/                ← Proveedores de servicios (no es MVC pero útil)                                                                                                                                          
+│                                                                                                                                                                                                                           
+├── resources/                                                                                                                                                                                                              
+│   └── views/                    ← Vistas (V)                                                                                                                                                                              
+│                                                                                                                                                                                                                           
+├── routes/                                                                                                                                                                                                                 
+│   ├── web.php                   ← Rutas para vistas y controladores (V y C)                                                                                                                                               
+│   └── api.php                   ← Rutas para API REST (MVC aplicado vía JSON)                                                                                                                                             
+│                                                                                                                                                                                                                           
+├── database/                                                                                                                                                                                                               
+│   ├── migrations/               ← Migraciones para crear estructuras de modelos                                                                                                                                           
+│   ├── factories/                ← Fabricantes de datos para modelos                                                                                                                                                       
+│   └── seeders/                  ← Carga de datos a los modelos                                                                                                                                                            
+│                                                                                                                                                                                                                           
+├── public/                                                                                                                                                                                                                 
+│   ├── css/                                                                                                                                                                                                                
+│   ├── js/                                                                                                                                                                                                                 
+│   └── index.php                 ← Entrada pública, renderiza vistas                                                                                                                                                       
+│                                                                                                                                                                                                                           
+├── config/                       ← Configuraciones (no parte de MVC, pero esencial)                                                                                                                                        
+├── bootstrap/                    ← Archivo de arranque (`app.php`)                                                                                                                                                         
+├── storage/                      ← Archivos generados (logs, caché)                                                                                                                                                        
+├── tests/                        ← Pruebas de modelos/controladores                                                                                                                                                        
+├── vendor/                       ← Dependencias externas (Composer)                                                                                                                                                        
+│                                                                                                                                                                                                                           
+├── .env                          ← Configuración de entorno                                                                                                                                                                
+├── artisan                       ← CLI de Laravel (permite ejecutar comandos)                                                                                                                                              
+├── composer.json                 ← Dependencias PHP                                                                                                                                                                        
+├── package.json                  ← Dependencias JS                                                                                                                                                                         
+├── README.md                     ← Documentación                                                                                                                                                                           
