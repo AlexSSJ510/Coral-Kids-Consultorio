@@ -40,7 +40,7 @@ class PacienteController extends Controller
             'email' => 'required|email|max:255',
         ]);
 
-        DB::statement('CALL sp_guardar_paciente(?, ?, ?, ?, ?, ?, ?)', [
+        DB::statement('CALL sp_insertar_paciente(?, ?, ?, ?, ?, ?, ?)', [
             $validated['dni'],
             $validated['nombre'],
             $validated['apellidos'],
